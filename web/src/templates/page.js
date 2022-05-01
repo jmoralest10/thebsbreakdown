@@ -11,6 +11,7 @@ import { TopWave, BottomWave } from "../components/wave";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
+import MapSection from "../components/grc276/MapSection";
 
 export const query = graphql`
   query PageTemplateQuery($id: String!) {
@@ -88,9 +89,13 @@ const Page = props => {
             case "topWave":
               el = <TopWave />;
               break;
+              case "MapSection":
+              el = <MapSection />;
+              break;
             case "bottomWave":
               el = <BottomWave />;
               break;
+             
             default:
               break;
           }
